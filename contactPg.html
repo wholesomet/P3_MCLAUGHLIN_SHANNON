@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<title>Luke's Dinner-Contact</title>
+
+<link href="contactLukesDinnerStyle.css" rel="stylesheet" type="text/css">
+</head>
+<body> 
+
+
+	<header> 
+		<img class="siteLogo" src="https://github.com/wholesomet/P2_MCLAUGHLIN_SHANNON/blob/main/lukes-diner-logo.png?raw=true" alt="luke's Diner Logo">
+		  <nav>
+			<ul>
+				<li class="home"><a id="home" href="homePg.html#home">Home</a></li>
+				<li class="about"><a id="about" href="aboutpg.html#about">About Us</a></li>
+				<li class="contact"><a id="contact" href="contactpg.html#contact">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header> 
+
+	<main> 
+		<section class="headings">
+			<h1>Contact Us</h1>
+			<h2>Please fill out the form to do so</h2> 
+		</section> 
+		
+		<form> 
+			<div class="userInfo">
+				<div class="fnameAndlname">
+					<div class="fnameLabAndBox">
+						<label for="fname">First Name:</label> 
+						<input name="fname" id="fname" type="text"> 
+						<br>
+					</div> 
+					
+					<div class="lnameLabAndBox">
+						<label for="lname">Last Name:</label> 
+						<input name="lname" id="lname" type="text"> 
+						<br> 
+					</div> 
+				</div>
+				
+				<div class="emailLabAndBox">
+					<label for="email">Email:</label> 
+					<input name="email" id="email" type="text"> 
+					<br>
+				</div>
+			</div> 
+			
+			<div class="bubbles">
+				<p>Subject:</p> 
+				<div class="bubbleOpt">
+					<input type="radio" id="question" name="question" value="question">
+					<label for="question" >I Have a Question/Comment</label>
+				</div>
+				
+				<div class="bubbleOpt">
+					<input type="radio" id="rec" name="rec" value="rec">
+					<label for="rec" >I Have a Recommendation</label>
+				</div>
+				
+				<div class="bubbleOpt">
+					<input type="radio" id="other" name="other" value="other">
+					<label for="other" >Other</label>
+				</div> 
+			</div>
+			
+			<div class="messageDiv">
+				<label for="message">Message:</label> 
+				<br>
+				<textarea name="message" id="message" ></textarea>
+					
+				<br>
+				<input class="submitbut" type="submit" name="submit" value="Submit">
+			</div> 
+		</form> 
+	</main> 
+
+	<footer> 
+		<p> 555-325 | Copyright &#169; 2024 All Rights Reserved</p>
+	</footer> 
+</body>
+</html>

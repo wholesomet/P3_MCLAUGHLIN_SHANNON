@@ -1,0 +1,182 @@
+@charset "utf-8";
+/*******************************************************************
+
+				Affects everything
+					
+***************************************************************************/
+
+body {
+	/*top, bottom & right, left*/
+	margin: 0px 0px;
+	overflow-x: hidden;
+}
+	
+nav li {
+	font-family: "Baskerville";
+	font-size: 24px;
+}
+
+p, h1, h2, form, .submitbut {
+	font-family: "Baskerville";
+} 
+
+/*******************************************************************
+
+					Heading
+					
+***************************************************************************/ 
+header {
+	width: auto;
+	height: 70%;
+	background-color: #f16a38;
+		
+}
+	@media (min-width: 1318px) { 
+		header { 
+			display: flex; 
+			justify-content: center;
+		}
+	}
+	@media (max-width: 1318px) { 
+		header { 
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			flex-wrap: wrap;
+			align-items: center;
+		} 
+		img.siteLogo, nav { 
+			position: relative;
+			left: 4%;
+			
+		}
+	}
+	
+img.siteLogo { 
+	width: 85px;
+	height: auto;
+	/*top bottom, right left*/
+	margin: 0% 4%;
+}
+nav {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+	nav li { 
+		list-style-type: none;
+		float: left;
+		margin-right: 56px;
+	}
+	nav a {
+		color: white;
+		text-decoration: none;
+	}
+
+/*page indicator*/
+.contact a {
+	position: relative;
+}
+.contact a:after{ 
+	content: "";
+	display: block;
+	height: 7px;
+	width: 107px;
+	background-color: #af4e00;
+	border-radius: 30px;
+}
+
+/*******************************************************************
+
+					Main
+					
+***************************************************************************/ 
+	form { 
+		align-content: center;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		
+	}
+		.userInfo, .bubbles p, .messageDiv label { 
+			font-size: 20px;
+		} 
+		.userInfo label, .messageDiv label{ 
+			position: relative;
+			left: -5px;
+			padding-bottom: 2px;
+		}
+		
+		.fnameAndlname { 
+			display: flex;
+			column-gap: 50px;
+		} 
+			.fnameLabAndBox { 
+				display: flex;
+				flex-direction: column;align-items: flex-start;
+			}
+			.lnameLabAndBox { 
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				align-content: flex-end;
+			} 
+		.emailLabAndBox { 
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		} 
+		.bubbles { 
+			margin-top: 13px;
+			margin-bottom: 33px;
+		}
+			.bubbles p { 
+				margin-bottom: 2px;
+				margin-top: 0px;
+			}
+
+		.messageDiv textarea { 
+			width: 100%; 
+			height: 78px;
+			margin-bottom: 10px;
+		}
+		
+			
+		
+		
+	@media (max-width: 750px) { 
+		img.siteLogo, nav { 
+			align-content: center;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+		}
+		form { 
+			position: relative; 
+			left: 4%;
+		} 
+		.messageDiv input { 
+			width: 66px; 
+			height: 33px; 
+			font-size: 17px;
+		}
+		
+	} 
+
+/*******************************************************************
+
+				footer 
+					
+***************************************************************************/ 
+
+footer p { 
+	filter: contrast(20%);
+	text-align: center;
+	padding-top: 20px;
+	font-family: "Baskerville";
+	font-size: 16px;
+	/*temp*/
+	display: none; 
+}
