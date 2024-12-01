@@ -90,10 +90,12 @@ nav {
 .contact a:after{ 
 	content: "";
 	display: block;
-	height: 7px;
-	width: 107px;
+	height: 9px;
+	width: 73px;
 	background-color: #af4e00;
 	border-radius: 30px;
+	position: relative;
+	left: 12px;
 }
 
 /*******************************************************************
