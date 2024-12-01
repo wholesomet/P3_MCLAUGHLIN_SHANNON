@@ -73,6 +73,16 @@ nav {
 		text-decoration: none;
 	}
 
+@media (max-width: 750px) { 
+		img.siteLogo, nav { 
+			align-content: center;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
 /*page indicator*/
 .contact a {
 	position: relative;
@@ -91,13 +101,39 @@ nav {
 					Main
 					
 ***************************************************************************/ 
+	.headings { 
+			display: flex;
+			flex-wrap: wrap;
+			align-content: center;
+			flex-direction: column;
+			position: relative; 
+			right: 62px;
+			padding-top: 20px;
+		} 
+		.headings h1 { 
+			margin-bottom: 5px; 
+		}
+		.headings h2 { 
+			margin-top: 0px; 
+			margin-bottom: 0px;
+		}
+ 
 	form { 
 		align-content: center;
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
+		margin: auto;
 		
+		background-color: #f9a84b;
+		background-clip: padding-box;
+		/*top bottom, right left*/
+		padding: 30px 38px;
+		width: min-content;
+		color: black;
+		border-radius: 1px;
 	}
+			
 		.userInfo, .bubbles p, .messageDiv label { 
 			font-size: 20px;
 		} 
@@ -135,48 +171,51 @@ nav {
 				margin-bottom: 2px;
 				margin-top: 0px;
 			}
-
 		.messageDiv textarea { 
 			width: 100%; 
 			height: 78px;
 			margin-bottom: 10px;
 		}
-		
-			
-		
-		
-	@media (max-width: 750px) { 
-		img.siteLogo, nav { 
-			align-content: center;
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: column;
-			align-items: center;
-		}
-		form { 
-			position: relative; 
-			left: 4%;
-		} 
 		.messageDiv input { 
 			width: 66px; 
-			height: 33px; 
+			height: 27px; 
 			font-size: 17px;
 		}
-		
-	} 
+		.submitbut, .messageDiv textarea, .userInfo input { 
+			color: black;
+			background-color: white;
+			border: 0px solid white;
+			border-radius: 3px;
+			}
+			.bubbleOpt input:after { 
+				position: relative;
+				content: '';
+				width: 15px;
+				height: 15px;
+				display: inline-block;
+				
+				color: black;background-color: white;border: 2px solid gray;
+				border-radius: 3px;
 
+			}
+		
+		
+	
 /*******************************************************************
 
 				footer 
 					
 ***************************************************************************/ 
+footer { 
+	position: fixed; 
+	bottom: 0px;
+	left: 0;
+	right: 0;
+} 
 
 footer p { 
 	filter: contrast(20%);
-	text-align: center;
 	padding-top: 20px;
-	font-family: "Baskerville";
 	font-size: 16px;
-	/*temp*/
-	display: none; 
+	text-align: center;
 }
