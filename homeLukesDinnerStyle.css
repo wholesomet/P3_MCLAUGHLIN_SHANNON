@@ -1,0 +1,521 @@
+@charset "utf-8";
+/*******************************************************************
+
+				Affects everything
+					
+***************************************************************************/
+
+body {
+	/*top, bottom & right, left*/
+	margin: 0px 0px;
+	overflow-x: hidden;
+}
+	
+nav li {
+	font-family: "Baskerville";
+	font-size: 24px;
+}
+
+p, h2, table {
+	font-family: "Baskerville";
+} 
+
+/*******************************************************************
+
+					Heading
+					
+***************************************************************************/ 
+header {
+	width: auto;
+	height: 70%;
+	background-color: #f16a38;
+		
+}
+	@media (min-width: 1318px) { 
+		header { 
+			display: flex; 
+			justify-content: center;
+		}
+	}
+	@media (max-width: 1318px) { 
+		header { 
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			flex-wrap: wrap;
+			align-items: center;
+		} 
+		img.siteLogo, nav { 
+			position: relative;
+			left: 4%;
+			
+		}
+	}
+	
+img.siteLogo { 
+	width: 85px;
+	height: auto;
+	/*top bottom, right left*/
+	margin: 0% 4%;
+}
+nav {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+	nav li { 
+		list-style-type: none;
+		float: left;
+		margin-right: 56px;
+	}
+	nav a {
+		color: white;
+		text-decoration: none;
+	}
+
+/*page indicator*/
+.home a:target {
+	position: relative;
+}
+.home:after{ 
+	content: "";
+	display: block;
+	height: 7px;
+	width: 58px;
+	background-color: #af4e00;
+	border-radius: 30px;
+}
+/*about page indicator
+.about a:target {
+	position: relative;
+}
+.about a:target:after{ 
+	content: "";
+	display: block;
+	height: 7px;
+	width: 90px;
+	background-color: #af4e00;
+	border-radius: 30px;
+}*/
+/*contact page indicator
+.contact a:target {
+	position: relative;
+}
+.contact a:target:after{ 
+	content: "";
+	display: block;
+	height: 7px;
+	width: 107px;
+	background-color: #af4e00;
+	border-radius: 30px;
+}*/
+
+/*******************************************************************
+
+					Main
+					
+***************************************************************************/ 
+@media (max-width: 1318px) { 
+		main { 
+			position: relative; 
+			left: 4%;
+		} 
+		main, img.siteLogo, nav { 
+			align-content: center;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+/*******************************************************************
+
+					carousel
+					
+***************************************************************************/ 
+.carousel-outside { 
+	height: 312px;
+	display: flex;
+	flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+	@media (min-width: 1318px) { 
+		.carousel-outside ~ p {
+			position: relative;
+			left: 56%;
+			top: -200px;
+			width: 35%; 
+			text-align: center;
+			/*top right bottom left
+			margin: 50px 4px 0px 0px;*/
+		}
+	} 
+	@media (max-width: 1318px) { 
+		.carousel-outside { 
+			position: relative;
+			right: 50px;
+		}
+			.carousel-outside ~ p { 
+				width: 502px;
+				position: relative;
+				text-align: center;
+				/*top right bottom left*/
+				padding: 39px 0px 74px 0px;
+			}
+		.carousel-control-prev { 
+			display: flex; 
+		}
+	}
+	
+.carousel {
+    position: relative;
+	/*top bottom, right left*/
+	margin: 20px 0px;
+    margin-right: auto;
+    width: 699px;
+}
+
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+	
+    width: 100%;
+    transition: -webkit-transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease,-webkit-transform .6s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px
+}
+
+.d-block {
+	position: relative;
+	height: 260px;
+	width: 510px;
+	object-fit: cover;
+	left: 156px; 
+}
+
+.carousel-item-next,.carousel-item-prev,.carousel-item.active {
+    display: block
+}
+
+.carousel-item-next,.carousel-item-prev {
+	position: relative;
+    top: 0
+}
+
+.carousel-item-next.carousel-item-left,.carousel-item-prev.carousel-item-right {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+}
+
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style:preserve-3d)) {
+    .carousel-item-next.carousel-item-left,.carousel-item-prev.carousel-item-right {
+        -webkit-transform:translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
+}
+
+.active.carousel-item-right,.carousel-item-next {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%)
+}
+
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style:preserve-3d)) {
+    .active.carousel-item-right,.carousel-item-next {
+        -webkit-transform:translate3d(100%,0,0);
+        transform: translate3d(100%,0,0)
+    }
+}
+
+.active.carousel-item-left,.carousel-item-prev {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%)
+}
+
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style:preserve-3d)) {
+    .active.carousel-item-left,.carousel-item-prev {
+        -webkit-transform:translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0)
+    }
+}
+
+		/*controls/arrows*/
+	.carousel-control-next,.carousel-control-prev {
+		position: relative;
+		/*bottom: -40px;*/
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		width: 35px;
+		/*height: 388px;*/
+		color: #fff;
+		text-align: center;
+		opacity: .5;
+		z-index: 15;
+	}
+
+.carousel-control-next:focus,.carousel-control-next:hover,.carousel-control-prev:focus,.carousel-control-prev:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9
+}
+
+.carousel-control-prev {
+    right: 613px;
+	top: 34px;
+}
+	.carousel-control-prev span:nth-of-type(2) {
+		display: none;
+	}
+
+.carousel-control-next {
+}
+	.carousel-control-next span:nth-of-type(2) {
+		
+		display: none;
+	}
+	
+.carousel-control-next-icon,.carousel-control-prev-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+}
+
+		/*indicators*/
+.carousel-indicators {
+    position: relative;
+    right: 0;
+	left: 354px;
+    bottom: -250px;
+    z-index: 15;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: flex-start;
+    padding-left: 0;
+    list-style: none;
+	width: fit-content;
+}
+
+.carousel-indicators li {
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: rgba(255,255,255,.5)
+}
+
+.carousel-indicators li::before {
+    position: relative;
+    top: -10px;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    content: ""
+}
+
+.carousel-indicators li::after {
+    position: relative;
+    bottom: -10px;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    content: ""
+}
+
+.carousel-indicators .active {
+    background-color: #fff
+}
+
+/*******************************************************************
+
+			everything else in body 
+					
+***************************************************************************/ 
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	/*top bottom, right left*/
+	margin: 0% 4%;
+	
+}
+	/*creates gutters for larger screens*/
+	@media (min-width: 1318px) { 
+		.row { 
+			/*top bottom, right left*/
+			margin: 0px 114px;
+			max-width: 1178px;
+			position: relative; 
+			left: 73px;
+		} 
+	}
+	
+	/*when row elements are verticaly aligned*/
+	@media (max-width: 1318px) {
+		/*centers .row div*/
+		.row { 
+		    justify-content: center;
+			position: relative;
+			max-width: 500px;
+		}
+		/*centers hour table and its heading*/
+		.map { 
+			position: relative; 
+			padding-bottom: 15px;
+		}
+		.hours, .menu { 
+			position: relative; 
+		}
+		.menu {
+			/*top right bottom left */
+			margin: 0px 130px 0px 140px;
+		}
+		.hours { 
+			margin-top: 70px;
+		}
+	}
+	
+	@media (max-width: 521px) {
+		.row { 
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+.card { 
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+	/*********** Map *****************/
+
+.map { 
+	width: min-content;
+}
+.map h2 { 
+	text-align: center;
+} 
+
+iframe {
+	width: 18em;
+	height: 22em;
+	border: 0em; 
+}
+	/*********** Menu *****************/
+.menu:hover:before, .menu:active:before  { 
+	content: "";
+	height: 352px;
+	width: 276px;
+	background-color: rgba(0, 0, 0, 0.2);
+	position: relative;
+	bottom: -266px;
+	margin: -56%;
+	z-index: 3;
+	pointer-events: none;
+}
+
+/*to make the map, menu, and hour table look good when the viewport has a width of 650px and up*/
+@media (max-width: 650px) {
+	.row { 
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.menu { 
+		/*top bottom, right left*/
+		margin: 0px 140px;
+	}
+}
+
+a#menu-inside { 
+	color: white;
+}
+.menu-heading {
+	z-index: 2;
+	position: relative;
+	top: 47%;
+	transform: rotate(0.14turn);
+}
+.menu-front {
+	width: 18em;   
+	height: auto; 
+} 
+
+	/*********** Hours *****************/
+.hours { 
+	display: flex;
+	justify-content: center;
+} 
+
+table, tbody, th, td  {
+	border: 3px solid black;
+	border-collapse: collapse;
+}
+@media (prefers-color-scheme: dark) {
+	table, tbody, th, td  {
+		border: 3px solid white;
+		border-collapse: collapse;
+	}
+} 
+	th { 
+		font-weight: normal;
+		width: 109px;
+	} 
+	td {
+		height: 41px;
+		text-align: center;
+		width: 104px;
+	}
+	tr { 
+		font-size: 21px;
+	} 
+
+	/*******************************************************************
+
+			everything else in body 
+					
+***************************************************************************/ 
+
+footer p { 
+	filter: contrast(20%);
+	text-align: center;
+	padding-top: 20px;
+	font-family: "Baskerville";
+	font-size: 16px;
+}
+	
