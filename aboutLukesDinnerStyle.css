@@ -16,7 +16,7 @@ nav li {
 	font-size: 24px;
 }
 
-p, h1, h2, form, .submitbut {
+p {
 	font-family: "Baskerville";
 } 
 
@@ -84,18 +84,18 @@ nav {
 	}
 
 /*page indicator*/
-.contact a {
+.about a {
 	position: relative;
 }
-.contact a:after{ 
+.about a:after{ 
 	content: "";
 	display: block;
-	height: 9px;
-	width: 73px;
+	height: 7px;
+	width: 58px;
 	background-color: #af4e00;
 	border-radius: 30px;
-	position: relative;
-	left: 12px;
+	position: relative; 
+	left: 14px;
 }
 
 /*******************************************************************
@@ -103,14 +103,74 @@ nav {
 					Main
 					
 ***************************************************************************/ 
+	@media (min-width: 1103px) { 
+		main p { 
+			display: flex; 
+			align-content: center;
+			flex-wrap: wrap;			
+			font-size: 27px; 
+		} 
+		.top { 
+			display: flex;
+			justify-content: center;
+		} 
+		.bottom { 
+			display: flex; 
+			flex-direction: row-reverse;
+		}
+	}
+	@media (max-width: 1103px) { 
+		.top, .bottom { 
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+			
+		.top p { 
+			width: 341px;
+		} 
+		.bottom p { 
+			width: 311px;
+		} 
+	} 
+	
+	main { 
+		/*top bottom, right left*/
+		margin: 44px 170px;
+	} 
+		
+	.top { 
+		margin-bottom: 50px;
+	} 
+		.top img { 
+			width: 325px;
+			height: auto; 
+			padding-right: 20px; 
+		} 
+	.bottom img { 
+		width: 381px;
+		height: auto;
+		/*object-fit: cover;*/
+		padding-left: 20px;
+	}
 
 /*******************************************************************
 
 				footer 
 					
 ***************************************************************************/ 
+@media (min-width: 750px) { 
+	footer {	  
+		position: fixed; 
+	} 
+} 
+@media (max-width: 750px) { 
+	footer {	  
+		position: relative; 
+	} 
+} 
 footer { 
-	position: fixed; 
 	bottom: 0px;
 	left: 0;
 	right: 0;
